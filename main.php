@@ -75,3 +75,40 @@ $number2 = 6;
 $result = calculate($operator, $number1, $number2);
 echo $result;
 ?>
+
+<br>
+
+<?php
+function fizzBuzz($n)
+{
+  for ($i = 1; $i <= $n; $i++) {
+    if ($i % 3 == 0 && $i % 5 == 0) {
+      echo "FizzBuzz ";
+    } elseif ($i % 3 == 0) {
+      echo "Fizz ";
+    } elseif ($i % 5 == 0) {
+      echo "Buzz ";
+    } else {
+      echo $i . " ";
+    }
+  }
+}
+$fizzBuzzCount = 15;
+fizzBuzz($fizzBuzzCount);
+?>
+
+<br>
+
+<?php
+function factorial($n)
+{
+  if ($n === 0 || $n === 1) {
+    return 1;
+  } else {
+    return $n * factorial($n - 1);
+  }
+}
+$number = 5;
+$result = factorial($number);
+echo "Factorial of $number is: " . $result;
+?>
